@@ -1,0 +1,116 @@
+---
+layout: default
+---
+{% assign c = site.data.content %}
+
+<section class="hero">
+  <div class="wrap">
+    <div class="badge">{{ c.hero.badge }}</div>
+    <h1>{{ c.hero.headline }}</h1>
+    <p class="lede">{{ c.hero.lede }}</p>
+    <div class="hero-ctas">
+      <a class="btn-primary" href="#contact">{{ c.hero.cta_primary }}</a>
+      <a class="btn-secondary" href="#work">{{ c.hero.cta_secondary }}</a>
+    </div>
+    <div class="hero-stats">
+      {% for m in c.metrics %}
+      <div><div class="n">{{ m.number }}</div><div class="l">{{ m.label }}</div></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="block soft" id="services">
+  <div class="wrap">
+    <div class="block-head">
+      <div class="kicker">Services</div>
+      <h2>{{ c.services_intro.title }}</h2>
+      <p>{{ c.services_intro.text }}</p>
+    </div>
+    <div class="cards-3">
+      {% for s in c.services %}
+      <div class="card">
+        <div class="icon">{{ forloop.index | prepend: '0' }}</div>
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.text }}</p>
+        <ul>{% for p in s.points %}<li>{{ p }}</li>{% endfor %}</ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head">
+      <div class="kicker">How it works</div>
+      <h2>What working together looks like</h2>
+    </div>
+    <div class="steps">
+      {% for step in c.process %}
+      <div class="step">
+        <div class="n">Step {{ forloop.index }}</div>
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="block soft" id="work">
+  <div class="wrap">
+    <div class="block-head">
+      <div class="kicker">Recent work</div>
+      <h2>What that's looked like in practice</h2>
+    </div>
+    <div class="work-list">
+      {% for case in c.cases %}
+      <div class="work">
+        <div>
+          <div class="sector">{{ case.sector }}</div>
+          <div class="client">{{ case.client }}</div>
+        </div>
+        <div>
+          <div class="headline">{{ case.headline }}</div>
+          <div class="detail">{{ case.text }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% if site.posts.size > 0 %}
+<section class="block">
+  <div class="wrap">
+    <div class="block-head">
+      <div class="kicker">Writing</div>
+      <h2>Notes on delivery and AI products</h2>
+    </div>
+    <div class="posts">
+      {% for post in site.posts limit:3 %}
+      <div class="post-row">
+        <div class="date">{{ post.date | date: "%B %-d, %Y" }}</div>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        {% if post.excerpt_text %}<p>{{ post.excerpt_text }}</p>{% endif %}
+        <a class="more" href="{{ post.url | relative_url }}">Read more</a>
+      </div>
+      {% endfor %}
+    </div>
+    <div style="margin-top:28px;"><a class="btn-secondary" href="{{ '/blog/' | relative_url }}">All posts</a></div>
+  </div>
+</section>
+{% endif %}
+
+<section class="block soft" id="about">
+  <div class="wrap about">
+    <h2>{{ c.about.title }}</h2>
+    <div>
+      {% for p in c.about.paragraphs %}<p>{{ p }}</p>{% endfor %}
+      <div class="chips">{% for t in c.about.tags %}<span>{{ t }}</span>{% endfor %}</div>
+    </div>
+  </div>
+</section>
+
+{% include contact.html %}

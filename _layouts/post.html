@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article class="block" style="border-top:none; padding-top:64px;">
+  <div class="wrap">
+    <div style="max-width:68ch;">
+      <a class="more" href="{{ '/blog/' | relative_url }}" style="font-size:0.88rem;">← All posts</a>
+      <h1 style="font-size:2rem; margin-top:18px;">{{ page.title }}</h1>
+      <div class="post-date">{{ page.date | date: "%B %-d, %Y" }}</div>
+    </div>
+    <div class="post-body" style="margin-top:36px;">{{ content }}</div>
+  </div>
+</article>
+{% include contact.html %}

@@ -1,0 +1,37 @@
+title: "Ahmad Makki — Project & AI Product Delivery"
+description: "Project Manager and AI Product Owner delivering SaaS, AI, and government software on time and on budget."
+author: "Ahmad Makki"
+email: "ahmadmakki01@outlook.com"
+linkedin: "https://www.linkedin.com/in/ahmadmakkii"
+location: "Beirut, Lebanon"
+url: ""
+baseurl: ""
+
+# Replace this with your Web3Forms access key (see SETUP-GUIDE)
+web3forms_key: "PASTE-YOUR-WEB3FORMS-KEY-HERE"
+
+collections:
+  services:
+    output: false
+  cases:
+    output: false
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+permalink: /blog/:title/
+paginate: 6
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - SETUP-GUIDE.md
+  - Gemfile
+  - Gemfile.lock
+  - README.md

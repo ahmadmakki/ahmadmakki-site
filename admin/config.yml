@@ -1,0 +1,95 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/img"
+public_folder: "/assets/img"
+
+site_url: /
+display_url: /
+
+collections:
+  # ---------- BLOG ----------
+  - name: "blog"
+    label: "Blog posts"
+    label_singular: "Blog post"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} — {{year}}-{{month}}-{{day}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Short summary (shown in the list)", name: "excerpt_text", widget: "text", required: false }
+      - { label: "Post content", name: "body", widget: "markdown" }
+
+  # ---------- HOMEPAGE ----------
+  - name: "homepage"
+    label: "Homepage content"
+    files:
+      - name: "content"
+        label: "Homepage"
+        file: "_data/content.yml"
+        fields:
+          - label: "Top section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Badge text (small pill at top)", name: "badge", widget: "string" }
+              - { label: "Big headline", name: "headline", widget: "string" }
+              - { label: "Paragraph under headline", name: "lede", widget: "text" }
+              - { label: "Main button text", name: "cta_primary", widget: "string" }
+              - { label: "Second button text", name: "cta_secondary", widget: "string" }
+
+          - label: "Numbers / stats"
+            name: "metrics"
+            widget: "list"
+            fields:
+              - { label: "Number", name: "number", widget: "string" }
+              - { label: "Description", name: "label", widget: "string" }
+
+          - label: "Services heading"
+            name: "services_intro"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "title", widget: "string" }
+              - { label: "Intro text", name: "text", widget: "text" }
+
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "Service name", name: "title", widget: "string" }
+              - { label: "Description", name: "text", widget: "text" }
+              - { label: "Bullet points", name: "points", widget: "list", field: { label: "Point", name: "point", widget: "string" } }
+
+          - label: "Process steps"
+            name: "process"
+            widget: "list"
+            fields:
+              - { label: "Step name", name: "title", widget: "string" }
+              - { label: "Description", name: "text", widget: "text" }
+
+          - label: "Work / case studies"
+            name: "cases"
+            widget: "list"
+            fields:
+              - { label: "Sector", name: "sector", widget: "string" }
+              - { label: "Client name(s)", name: "client", widget: "string" }
+              - { label: "Result headline", name: "headline", widget: "string" }
+              - { label: "Details", name: "text", widget: "text" }
+
+          - label: "About section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "title", widget: "string" }
+              - { label: "Paragraphs", name: "paragraphs", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" } }
+              - { label: "Skill tags", name: "tags", widget: "list", field: { label: "Tag", name: "tag", widget: "string" } }
+
+          - label: "Contact section"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }

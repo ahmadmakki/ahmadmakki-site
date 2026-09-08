@@ -1,0 +1,83 @@
+hero:
+  badge: "Available for new projects"
+  headline: "I take software projects from idea to shipped."
+  lede: "Project manager and AI product owner with 5+ years across SaaS, AI, and government software. Clients bring me in when timelines are slipping, an AI feature needs a real plan, or a build needs someone who can talk to engineers and stakeholders in the same sentence."
+  cta_primary: "Book an intro call"
+  cta_secondary: "See how I work"
+
+metrics:
+  - number: "20+"
+    label: "products delivered end-to-end"
+  - number: "100%"
+    label: "on-time release record"
+  - number: "~30%"
+    label: "faster delivery after process fixes"
+  - number: "5+ yrs"
+    label: "SaaS, AI & gov software"
+
+services_intro:
+  title: "What I take off your plate"
+  text: "Three ways I typically work with teams — pick one, or start with a conversation and we'll scope it."
+
+services:
+  - tag: "01 — Delivery"
+    title: "End-to-end project delivery"
+    text: "I own scope, timeline, budget, and risk from kickoff to release, so your engineering team builds and your stakeholders stay aligned instead of surprised."
+    points:
+      - "Requirements workshops & specs"
+      - "Sprint planning & backlog"
+      - "Cross-functional team leadership"
+  - tag: "02 — AI Product Ownership"
+    title: "AI & ML product ownership"
+    text: "I define what \"good\" looks like for an AI feature, prioritize the backlog around it, and keep it grounded in what's actually shippable — not just what's demo-able."
+    points:
+      - "AI/ML & IoT feature roadmapping"
+      - "Backlog & acceptance criteria"
+      - "Bridging data teams & stakeholders"
+  - tag: "03 — Delivery Rescue"
+    title: "Fix a slipping project"
+    text: "Bring me in when a project is behind or the process is the problem. I find where time is leaking and put governance in place that sticks."
+    points:
+      - "Workflow & process audit"
+      - "RAID / risk management"
+      - "Status reporting that stakeholders trust"
+
+process:
+  - title: "Intro call"
+    text: "30 minutes — what you're building, where it's stuck, what \"done\" looks like."
+  - title: "Scope & plan"
+    text: "I come back with a delivery plan or a diagnosis of what's slipping and why."
+  - title: "Embed & run"
+    text: "I work with your team directly — Jira, standups, stakeholder reporting, the real thing."
+  - title: "Ship & hand off"
+    text: "Release, then a clean handoff with documentation so it doesn't depend on me forever."
+
+cases:
+  - sector: "Enterprise & government clients"
+    client: "MEA · ISF · Touch · Sursock Museum"
+    headline: "15+ initiatives delivered on time and on budget"
+    text: "SaaS platforms, mobile apps, and government portals — directing teams of 5–10 across engineering, design, and QA, from requirements workshop through release."
+  - sector: "Construction-tech SaaS"
+    client: "Pilecubes"
+    headline: "AI & IoT features shipped into a live manufacturing product"
+    text: "Owned the product cycle end to end, shipping two releases plus a manufacturing dashboard, and led integration of machine-connectivity features for real-time, data-driven decisions."
+  - sector: "Product & delivery org"
+    client: "Digital Prestige"
+    headline: "100% of release deadlines met across 5+ products"
+    text: "Ran Agile ceremonies for teams of 10+, cut delivery slippage by ~20%, and defined technical requirements for AI/ML data-analysis features."
+
+about:
+  title: "Why clients keep me on the technical side of the table."
+  paragraphs:
+    - "I started as a developer — building REST APIs and backend features in Django — before moving into product and delivery. That's the difference in how I run projects: I can read a sprint board, follow an architecture trade-off, and tell you honestly whether a timeline is realistic, instead of just relaying what engineering tells me."
+    - "I hold a certification in McKinsey structured problem-solving and a degree in Management Information Systems. I've worked hybrid and remote with teams across Lebanon and Qatar, and I'm comfortable being the one stakeholder-facing person a client's project depends on."
+  tags:
+    - "Agile / Scrum / Kanban"
+    - "Jira · Microsoft Project"
+    - "SQL · Firebase · REST APIs"
+    - "JavaScript / React · Python"
+    - "Arabic · English · French"
+
+contact:
+  title: "Have a project that needs a plan?"
+  text: "Tell me what you're building and where it's stuck. I'll reply within a day."
