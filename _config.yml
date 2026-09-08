@@ -8,7 +8,7 @@ url: ""
 baseurl: ""
 
 # Replace this with your Web3Forms access key (see SETUP-GUIDE)
-web3forms_key: "PASTE-YOUR-WEB3FORMS-KEY-HERE"
+web3forms_key: "70913050-fef6-4c4d-8766-4770ba79943d"
 
 collections:
   services:
