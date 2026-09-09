@@ -5,30 +5,82 @@ layout: default
 
 <section class="hero">
   <div class="wrap">
-    <div class="meta">
-      {% if site.avatar != blank %}<span class="avatar lg" style="background-image:url('{{ site.avatar | relative_url }}')"></span>{% else %}<span class="avatar lg">{{ site.initials | default: 'AM' }}</span>{% endif %}
-      <span>{{ c.hero.badge }}</span>
-    </div>
-    <h1>{{ c.hero.headline }}</h1>
-    <p class="lede">{{ c.hero.lede }}</p>
-    <div class="hero-ctas">
-      <a class="btn-primary" href="#contact">{{ c.hero.cta_primary }}</a>
-      <a class="btn-text" href="#work">{{ c.hero.cta_secondary }}</a>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="meta">
+          {% if site.avatar != blank %}<span class="avatar lg" style="background-image:url('{{ site.avatar | relative_url }}')"></span>{% else %}<span class="avatar lg">{{ site.initials | default: 'AM' }}</span>{% endif %}
+          <span>{{ c.hero.badge }}</span>
+        </div>
+        <h1>{{ c.hero.headline }}</h1>
+        <p class="lede">{{ c.hero.lede }}</p>
+        <div class="hero-ctas">
+          <a class="btn-primary" href="#contact">{{ c.hero.cta_primary }}</a>
+          <a class="btn-text" href="#work">{{ c.hero.cta_secondary }}</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="var(--accent-soft)"/>
+              <stop offset="1" stop-color="#F6F8F5"/>
+            </linearGradient>
+            <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+              <circle cx="1.5" cy="1.5" r="1.5" fill="var(--line)"/>
+            </pattern>
+          </defs>
+
+          <!-- panel -->
+          <rect x="10" y="10" width="400" height="440" rx="24" fill="url(#panel)" stroke="var(--line)"/>
+          <rect x="10" y="10" width="400" height="440" rx="24" fill="url(#dots)" opacity="0.5"/>
+
+          <!-- delivery flow path: idea -> shipped -->
+          <path class="flow" d="M70 110 C 150 110, 150 230, 230 230 S 320 350, 350 350"
+                stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6 10" opacity="0.9"/>
+
+          <!-- milestone nodes -->
+          <g class="node n1"><circle cx="70" cy="110" r="9" fill="var(--accent)"/><circle cx="70" cy="110" r="16" stroke="var(--accent)" opacity="0.25"/></g>
+          <g class="node n2"><circle cx="230" cy="230" r="9" fill="var(--accent)"/><circle cx="230" cy="230" r="16" stroke="var(--accent)" opacity="0.25"/></g>
+          <g class="node n3"><circle cx="350" cy="350" r="9" fill="var(--accent)"/><circle cx="350" cy="350" r="16" stroke="var(--accent)" opacity="0.25"/></g>
+
+          <!-- floating task cards -->
+          <g class="card c1">
+            <rect x="70" y="52" width="150" height="46" rx="10" fill="#fff" stroke="var(--line)"/>
+            <rect x="84" y="66" width="60" height="6" rx="3" fill="var(--accent)"/>
+            <rect x="84" y="80" width="110" height="5" rx="2.5" fill="var(--line)"/>
+          </g>
+          <g class="card c2">
+            <rect x="238" y="168" width="150" height="46" rx="10" fill="#fff" stroke="var(--line)"/>
+            <rect x="252" y="182" width="46" height="6" rx="3" fill="var(--accent)"/>
+            <rect x="252" y="196" width="110" height="5" rx="2.5" fill="var(--line)"/>
+          </g>
+          <g class="card c3">
+            <rect x="196" y="372" width="150" height="46" rx="10" fill="#fff" stroke="var(--line)"/>
+            <path d="M212 395l6 6 12-12" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="240" y="392" width="90" height="5" rx="2.5" fill="var(--line)"/>
+          </g>
+        </svg>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="block soft" id="services">
   <div class="wrap">
-    <div class="block-head">
+    <div class="block-head reveal">
       <div class="kicker">Services</div>
       <h2>{{ c.services_intro.title }}</h2>
       <p>{{ c.services_intro.text }}</p>
     </div>
+    {% assign service_icons = "delivery,ai,rescue" | split: "," %}
     <div class="srows">
       {% for s in c.services %}
-      <div class="srow">
-        <div class="no">{{ forloop.index | prepend: '0' }}</div>
+      <div class="srow reveal">
+        {% assign s_icon = s.icon | default: service_icons[forloop.index0] %}
+        <div class="no">
+          <span class="ico-badge">{% include icon.html name=s_icon %}</span>
+          <span class="no-num">{{ forloop.index | prepend: '0' }}</span>
+        </div>
         <h3>{{ s.title }}</h3>
         <div class="s-body">
           <p>{{ s.text }}</p>
@@ -42,13 +94,16 @@ layout: default
 
 <section class="block">
   <div class="wrap">
-    <div class="block-head">
+    <div class="block-head reveal">
       <div class="kicker">How it works</div>
       <h2>What working together looks like</h2>
     </div>
+    {% assign step_icons = "call,plan,run,ship" | split: "," %}
     <div class="steps">
       {% for step in c.process %}
-      <div class="step">
+      {% assign p_icon = step.icon | default: step_icons[forloop.index0] %}
+      <div class="step reveal">
+        <div class="step-ico">{% include icon.html name=p_icon %}</div>
         <div class="n">Step {{ forloop.index }}</div>
         <h3>{{ step.title }}</h3>
         <p>{{ step.text }}</p>
@@ -60,14 +115,14 @@ layout: default
 
 <section class="block soft" id="work">
   <div class="wrap">
-    <div class="block-head">
+    <div class="block-head reveal">
       <div class="kicker">Selected work</div>
       <h2>Engagements, by outcome</h2>
       <p>Client names withheld for confidentiality — described by sector and result.</p>
     </div>
     <div class="work-list">
       {% for case in c.cases %}
-      <div class="work">
+      <div class="work reveal">
         <div>
           <div class="sector">{{ case.sector }}</div>
           <div class="client">{{ case.client }}</div>
@@ -86,7 +141,7 @@ layout: default
 <div class="testi-block">
   <div class="wrap">
     {% assign t = c.testimonials | first %}
-    <div class="testi">
+    <div class="testi reveal">
       <div class="mark">What clients say</div>
       <q>{{ t.quote }}</q>
       <div class="by"><b>{{ t.name }}</b>{% if t.role %} — {{ t.role }}{% endif %}</div>
@@ -98,7 +153,7 @@ layout: default
 {% if site.posts.size > 0 %}
 <section class="block">
   <div class="wrap">
-    <div class="block-head">
+    <div class="block-head reveal">
       <div class="kicker">Writing</div>
       <h2>Notes on delivery and AI products</h2>
     </div>

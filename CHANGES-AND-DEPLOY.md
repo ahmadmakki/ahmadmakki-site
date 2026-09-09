@@ -117,3 +117,42 @@ git push --force origin main
 
 If a collaborator or Netlify has the old history cached, this can get fiddly —
 tell me and I'll walk you through it. If in doubt, skipping this is fine.
+
+---
+
+## 7. Icons update (added after first version)
+
+Simple inline line-icons were added to the Services and Process sections.
+
+Files changed in this update — re-upload these three:
+- `_includes/icon.html`  ...... NEW (the icon set)
+- `index.html`  ............... services + process now show an icon each
+- `assets/css/style.css`  ..... icon styling appended at the bottom
+
+Notes:
+- Icons are inline SVG (no external library) — fast and secure.
+- They are mapped by position: 1st/2nd/3rd service and 1st–4th step. Your
+  current content matches, so they line up. If you ADD a service/step in the
+  CMS, the extra one shows a neutral circle until you assign it an icon.
+- Available icon names: delivery, ai, rescue, call, plan, run, ship.
+
+---
+
+## 8. Hero graphic + motion (round 2)
+
+Priorities addressed: striking hero (abstract, no face) + scroll/hover motion.
+
+Files changed — re-upload these:
+- `index.html` ................ two-column hero with abstract SVG graphic; reveal classes
+- `assets/css/style.css` ...... hero layout, SVG animations, scroll-reveal, hover polish
+- `_layouts/default.html` ..... links the new reveal script
+- `assets/js/reveal.js` ....... NEW — fades sections in on scroll
+
+Notes:
+- The hero graphic is inline SVG (no image file) themed "idea -> shipped": a
+  delivery path with milestone nodes and floating task cards, animated on load.
+- Scroll-reveal and the animations respect `prefers-reduced-motion`.
+- No new external requests, so the security headers are unaffected.
+
+Still on the list for a future round (your ranking): depth (case-study pages /
+FAQ / richer about) and trust (testimonials + client strip).
