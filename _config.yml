@@ -1,14 +1,16 @@
 title: "Ahmad Makki — Project & AI Product Delivery"
 description: "Project Manager and AI Product Owner delivering SaaS, AI, and government software on time and on budget."
 author: "Ahmad Makki"
+initials: "AM"          # monogram shown until a headshot is uploaded
+avatar: ""              # e.g. "/assets/img/headshot.jpg" — set this to show a real photo
 email: "ahmadmakki01@outlook.com"
 linkedin: "https://www.linkedin.com/in/ahmadmakkii"
-location: "Beirut, Lebanon"
+location: "Available worldwide · remote"
 url: ""
 baseurl: ""
 
 # Replace this with your Web3Forms access key (see SETUP-GUIDE)
-web3forms_key: "70913050-fef6-4c4d-8766-4770ba79943d"
+web3forms_key: "70913050-fef6-4c4d-8766-4770b"
 
 collections:
   services:

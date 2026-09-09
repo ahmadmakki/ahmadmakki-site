@@ -4,9 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
+  <meta name="referrer" content="same-origin">
   <title>Edit your site</title>
 </head>
 <body>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <!-- Pinned to ~3.15.1: receives patch-level security fixes, but will not
+       auto-jump to an arbitrary future 3.x release (supply-chain safety).
+       Bump this deliberately after checking https://github.com/decaporg/decap-cms/releases -->
+  <script src="https://unpkg.com/decap-cms@~3.15.1/dist/decap-cms.js"></script>
 </body>
 </html>

@@ -79,6 +79,16 @@ collections:
               - { label: "Result headline", name: "headline", widget: "string" }
               - { label: "Details", name: "text", widget: "text" }
 
+          - label: "Client testimonials"
+            name: "testimonials"
+            widget: "list"
+            required: false
+            summary: "{{fields.name}} — {{fields.role}}"
+            fields:
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Name or title", name: "name", widget: "string" }
+              - { label: "Role / company (kept anonymous is fine)", name: "role", widget: "string", required: false }
+
           - label: "About section"
             name: "about"
             widget: "object"

@@ -15,14 +15,17 @@
 
 <nav class="top">
   <div class="wrap">
-    <a class="brand" href="{{ '/' | relative_url }}">{{ site.author }}</a>
+    <a class="brand" href="{{ '/' | relative_url }}">
+      {% if site.avatar != blank %}<span class="avatar" style="background-image:url('{{ site.avatar | relative_url }}')"></span>{% else %}<span class="avatar">{{ site.initials | default: 'AM' }}</span>{% endif %}
+      {{ site.author }}<span class="dot">.</span>
+    </a>
     <div class="links">
       <a href="{{ '/#services' | relative_url }}">Services</a>
       <a href="{{ '/#work' | relative_url }}">Work</a>
       <a href="{{ '/blog/' | relative_url }}">Blog</a>
       <a href="{{ '/#about' | relative_url }}">About</a>
     </div>
-    <a class="cta" href="{{ '/#contact' | relative_url }}">Work with me</a>
+    <a class="cta" href="{{ '/#contact' | relative_url }}">Start a project</a>
   </div>
 </nav>
 
@@ -30,27 +33,17 @@
 
 <footer>
   <div class="wrap foot">
-    <div>{{ site.author }} — Project Manager &amp; AI Product Owner</div>
+    <div>© {{ 'now' | date: "%Y" }} {{ site.author }} — Project Manager &amp; AI Product Owner</div>
     <div>
       <a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
       &nbsp;·&nbsp;
       <a href="mailto:{{ site.email }}">Email</a>
-      &nbsp;·&nbsp; {{ site.location }}
+      {% if site.location %}&nbsp;·&nbsp; {{ site.location }}{% endif %}
     </div>
   </div>
 </footer>
 
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", function(user){
-      if (!user) {
-        window.netlifyIdentity.on("login", function(){
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
+<script src="{{ '/assets/js/identity-redirect.js' | relative_url }}" defer></script>
 
 </body>
 </html>

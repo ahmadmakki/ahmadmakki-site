@@ -5,17 +5,15 @@ layout: default
 
 <section class="hero">
   <div class="wrap">
-    <div class="badge">{{ c.hero.badge }}</div>
+    <div class="meta">
+      {% if site.avatar != blank %}<span class="avatar lg" style="background-image:url('{{ site.avatar | relative_url }}')"></span>{% else %}<span class="avatar lg">{{ site.initials | default: 'AM' }}</span>{% endif %}
+      <span>{{ c.hero.badge }}</span>
+    </div>
     <h1>{{ c.hero.headline }}</h1>
     <p class="lede">{{ c.hero.lede }}</p>
     <div class="hero-ctas">
       <a class="btn-primary" href="#contact">{{ c.hero.cta_primary }}</a>
-      <a class="btn-secondary" href="#work">{{ c.hero.cta_secondary }}</a>
-    </div>
-    <div class="hero-stats">
-      {% for m in c.metrics %}
-      <div><div class="n">{{ m.number }}</div><div class="l">{{ m.label }}</div></div>
-      {% endfor %}
+      <a class="btn-text" href="#work">{{ c.hero.cta_secondary }}</a>
     </div>
   </div>
 </section>
@@ -27,13 +25,15 @@ layout: default
       <h2>{{ c.services_intro.title }}</h2>
       <p>{{ c.services_intro.text }}</p>
     </div>
-    <div class="cards-3">
+    <div class="srows">
       {% for s in c.services %}
-      <div class="card">
-        <div class="icon">{{ forloop.index | prepend: '0' }}</div>
+      <div class="srow">
+        <div class="no">{{ forloop.index | prepend: '0' }}</div>
         <h3>{{ s.title }}</h3>
-        <p>{{ s.text }}</p>
-        <ul>{% for p in s.points %}<li>{{ p }}</li>{% endfor %}</ul>
+        <div class="s-body">
+          <p>{{ s.text }}</p>
+          {% if s.points %}<ul>{% for p in s.points %}<li>{{ p }}</li>{% endfor %}</ul>{% endif %}
+        </div>
       </div>
       {% endfor %}
     </div>
@@ -61,8 +61,9 @@ layout: default
 <section class="block soft" id="work">
   <div class="wrap">
     <div class="block-head">
-      <div class="kicker">Recent work</div>
-      <h2>What that's looked like in practice</h2>
+      <div class="kicker">Selected work</div>
+      <h2>Engagements, by outcome</h2>
+      <p>Client names withheld for confidentiality — described by sector and result.</p>
     </div>
     <div class="work-list">
       {% for case in c.cases %}
@@ -80,6 +81,19 @@ layout: default
     </div>
   </div>
 </section>
+
+{% if c.testimonials and c.testimonials.size > 0 %}
+<div class="testi-block">
+  <div class="wrap">
+    {% assign t = c.testimonials | first %}
+    <div class="testi">
+      <div class="mark">What clients say</div>
+      <q>{{ t.quote }}</q>
+      <div class="by"><b>{{ t.name }}</b>{% if t.role %} — {{ t.role }}{% endif %}</div>
+    </div>
+  </div>
+</div>
+{% endif %}
 
 {% if site.posts.size > 0 %}
 <section class="block">
@@ -104,11 +118,19 @@ layout: default
 {% endif %}
 
 <section class="block soft" id="about">
-  <div class="wrap about">
-    <h2>{{ c.about.title }}</h2>
-    <div>
-      {% for p in c.about.paragraphs %}<p>{{ p }}</p>{% endfor %}
-      <div class="chips">{% for t in c.about.tags %}<span>{{ t }}</span>{% endfor %}</div>
+  <div class="wrap">
+    <div class="about">
+      <div>
+        <div class="a-lead">
+          {% if site.avatar != blank %}<span class="avatar lg" style="background-image:url('{{ site.avatar | relative_url }}')"></span>{% else %}<span class="avatar lg">{{ site.initials | default: 'AM' }}</span>{% endif %}
+          <div class="kicker" style="margin:0;">About</div>
+        </div>
+        <h2>{{ c.about.title }}</h2>
+        {% for p in c.about.paragraphs %}<p>{{ p }}</p>{% endfor %}
+      </div>
+      <div class="skills">
+        {% for t in c.about.tags %}<div><b>{{ t }}</b></div>{% endfor %}
+      </div>
     </div>
   </div>
 </section>

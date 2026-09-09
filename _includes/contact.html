@@ -11,10 +11,10 @@
     </div>
 
     <div class="form-card">
-      <form id="contact-form">
+      <form id="contact-form" data-email="{{ site.email }}">
         <input type="hidden" name="access_key" value="{{ site.web3forms_key }}">
         <input type="hidden" name="subject" value="New enquiry from your website">
-        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
         <div class="field">
           <label for="cf-name">Your name</label>
@@ -44,21 +44,4 @@
   </div>
 </section>
 
-<script>
-(function(){
-  var form = document.getElementById('contact-form');
-  var status = document.getElementById('form-status');
-  if(!form) return;
-  form.addEventListener('submit', function(ev){
-    ev.preventDefault();
-    status.textContent = 'Sending…';
-    fetch('https://api.web3forms.com/submit', { method:'POST', body:new FormData(form) })
-      .then(function(r){ return r.json(); })
-      .then(function(j){
-        if(j.success){ form.reset(); status.textContent = 'Message sent. I usually reply within a day.'; }
-        else { status.textContent = 'That did not send. Email me at {{ site.email }}.'; }
-      })
-      .catch(function(){ status.textContent = 'That did not send. Email me at {{ site.email }}.'; });
-  });
-})();
-</script>
+<script src="{{ '/assets/js/contact.js' | relative_url }}" defer></script>

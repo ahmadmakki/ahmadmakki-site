@@ -54,15 +54,15 @@ process:
 
 cases:
   - sector: "Enterprise & government clients"
-    client: "MEA · ISF · Touch · Sursock Museum"
+    client: "Aviation, public-sector & cultural institutions"
     headline: "15+ initiatives delivered on time and on budget"
     text: "SaaS platforms, mobile apps, and government portals — directing teams of 5–10 across engineering, design, and QA, from requirements workshop through release."
   - sector: "Construction-tech SaaS"
-    client: "Pilecubes"
+    client: "Construction-tech / manufacturing SaaS"
     headline: "AI & IoT features shipped into a live manufacturing product"
     text: "Owned the product cycle end to end, shipping two releases plus a manufacturing dashboard, and led integration of machine-connectivity features for real-time, data-driven decisions."
   - sector: "Product & delivery org"
-    client: "Digital Prestige"
+    client: "Multi-product software & delivery team"
     headline: "100% of release deadlines met across 5+ products"
     text: "Ran Agile ceremonies for teams of 10+, cut delivery slippage by ~20%, and defined technical requirements for AI/ML data-analysis features."
 
@@ -70,7 +70,7 @@ about:
   title: "Why clients keep me on the technical side of the table."
   paragraphs:
     - "I started as a developer — building REST APIs and backend features in Django — before moving into product and delivery. That's the difference in how I run projects: I can read a sprint board, follow an architecture trade-off, and tell you honestly whether a timeline is realistic, instead of just relaying what engineering tells me."
-    - "I hold a certification in McKinsey structured problem-solving and a degree in Management Information Systems. I've worked hybrid and remote with teams across Lebanon and Qatar, and I'm comfortable being the one stakeholder-facing person a client's project depends on."
+    - "I hold a certification in McKinsey structured problem-solving and a degree in Management Information Systems. I've worked hybrid and remote with distributed teams, and I'm comfortable being the one stakeholder-facing person a client's project depends on."
   tags:
     - "Agile / Scrum / Kanban"
     - "Jira · Microsoft Project"
@@ -81,3 +81,12 @@ about:
 contact:
   title: "Have a project that needs a plan?"
   text: "Tell me what you're building and where it's stuck. I'll reply within a day."
+
+# Client testimonials — the single most powerful trust element on the page.
+# Add a real (even anonymised) quote below and the testimonial section will appear.
+# Leave the list empty to hide the section entirely. Example format:
+# testimonials:
+#   - quote: "Deadlines stopped slipping the month he joined."
+#     name: "Head of Digital"
+#     role: "National telecom operator"
+testimonials: []
