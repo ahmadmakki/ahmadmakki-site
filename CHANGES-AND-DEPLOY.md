@@ -225,3 +225,16 @@ New/changed files this round:
 - NEW: `favicon.ico`, `assets/img/logo.svg`, `assets/img/favicon.svg`,
   `assets/img/apple-touch-icon.png`, `assets/img/favicon-32.png`,
   `assets/img/favicon-16.png`, `assets/img/logo-512.png`
+
+---
+
+## 11. Hotfix — doubled URLs (baseurl)
+
+Symptom: canonical, og:image, logo, favicon and nav links were doubled
+(`.../https://ahmadmakki.netlify.app/...`), breaking the logo/favicon/share image.
+
+Cause: `baseurl` in `_config.yml` had been set to the full site URL. With
+`relative_url`/`absolute_url` and `jekyll-seo-tag`, that prepends the domain twice.
+
+Fix: `baseurl: ""` (root-domain site); `url` stays the full domain. Re-upload
+`_config.yml`. This alone fixes the logo, favicon and social image not loading.
