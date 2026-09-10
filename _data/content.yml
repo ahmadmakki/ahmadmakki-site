@@ -1,7 +1,7 @@
 hero:
   badge: "Available for new projects"
   headline: "I take software projects from idea to shipped."
-  lede: "Project manager and AI product owner with 5+ years across SaaS, AI, and government software. Clients bring me in when timelines are slipping, an AI feature needs a real plan, or a build needs someone who can talk to engineers and stakeholders in the same sentence."
+  lede: "Project manager and AI product owner with 5+ years across SaaS, AI, and government software. Clients bring me in to shape a new product or platform into a real roadmap, to get a slipping timeline back on track, or when a build needs someone who can talk to engineers and stakeholders in the same sentence."
   cta_primary: "Book an intro call"
   cta_secondary: "See how I work"
 
@@ -17,24 +17,31 @@ metrics:
 
 services_intro:
   title: "What I take off your plate"
-  text: "Three ways I typically work with teams — pick one, or start with a conversation and we'll scope it."
+  text: "From shaping a brand-new product to rescuing one that's stuck — four ways I work with teams. Pick one, or start with a conversation and we'll scope it together."
 
 services:
-  - tag: "01 — Delivery"
+  - icon: "roadmap"
+    title: "Product strategy & roadmap"
+    text: "Have an idea for a product or platform but no clear path to build it? I turn the vision into a concrete roadmap — scoping the MVP, sequencing releases, and translating 'we want to build X' into a plan your engineers can actually execute."
+    points:
+      - "Product vision to roadmap"
+      - "MVP scoping & release planning"
+      - "Feasibility & estimate sanity-checks"
+  - icon: "delivery"
     title: "End-to-end project delivery"
     text: "I own scope, timeline, budget, and risk from kickoff to release, so your engineering team builds and your stakeholders stay aligned instead of surprised."
     points:
       - "Requirements workshops & specs"
       - "Sprint planning & backlog"
       - "Cross-functional team leadership"
-  - tag: "02 — AI Product Ownership"
+  - icon: "ai"
     title: "AI & ML product ownership"
     text: "I define what \"good\" looks like for an AI feature, prioritize the backlog around it, and keep it grounded in what's actually shippable — not just what's demo-able."
     points:
       - "AI/ML & IoT feature roadmapping"
       - "Backlog & acceptance criteria"
       - "Bridging data teams & stakeholders"
-  - tag: "03 — Delivery Rescue"
+  - icon: "rescue"
     title: "Fix a slipping project"
     text: "Bring me in when a project is behind or the process is the problem. I find where time is leaking and put governance in place that sticks."
     points:

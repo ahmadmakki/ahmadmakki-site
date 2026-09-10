@@ -1,0 +1,18 @@
+# Ahmad Makki
+
+> Project Manager and AI Product Owner. Delivers SaaS, AI/ML, and government
+> software end to end — owning scope, timeline, and risk from kickoff to release.
+
+## Services
+- End-to-end project delivery (requirements, sprint planning, cross-functional leadership)
+- AI & ML product ownership (roadmap, acceptance criteria, bridging data teams and stakeholders)
+- Project rescue (process audit, risk management, stakeholder reporting)
+
+## Background
+Started as a developer (Django, REST APIs) before moving into product and delivery.
+Certified in McKinsey structured problem-solving; degree in Management Information Systems.
+Works hybrid and remote with distributed teams.
+
+## Contact
+- Email: ahmadmakki01@outlook.com
+- LinkedIn: https://www.linkedin.com/in/ahmadmakkii

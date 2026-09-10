@@ -1,5 +1,7 @@
 ---
 layout: default
+description: "Ahmad Makki — Project Manager & AI Product Owner. I take SaaS, AI/ML, and government software projects from idea to shipped: scope, timeline, risk, and delivery."
+image: /assets/img/og-cover.png
 ---
 {% assign c = site.data.content %}
 
@@ -23,7 +25,7 @@ layout: default
           <defs>
             <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
               <stop offset="0" stop-color="var(--accent-soft)"/>
-              <stop offset="1" stop-color="#F6F8F5"/>
+              <stop offset="1" stop-color="#F5F7FB"/>
             </linearGradient>
             <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
               <circle cx="1.5" cy="1.5" r="1.5" fill="var(--line)"/>
@@ -72,14 +74,13 @@ layout: default
       <h2>{{ c.services_intro.title }}</h2>
       <p>{{ c.services_intro.text }}</p>
     </div>
-    {% assign service_icons = "delivery,ai,rescue" | split: "," %}
+    {% assign service_icons = "roadmap,delivery,ai,rescue" | split: "," %}
     <div class="srows">
       {% for s in c.services %}
       <div class="srow reveal">
         {% assign s_icon = s.icon | default: service_icons[forloop.index0] %}
         <div class="no">
           <span class="ico-badge">{% include icon.html name=s_icon %}</span>
-          <span class="no-num">{{ forloop.index | prepend: '0' }}</span>
         </div>
         <h3>{{ s.title }}</h3>
         <div class="s-body">
@@ -92,7 +93,7 @@ layout: default
   </div>
 </section>
 
-<section class="block">
+<section class="block dark">
   <div class="wrap">
     <div class="block-head reveal">
       <div class="kicker">How it works</div>

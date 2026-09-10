@@ -6,8 +6,11 @@ avatar: ""              # e.g. "/assets/img/headshot.jpg" — set this to show a
 email: "ahmadmakki01@outlook.com"
 linkedin: "https://www.linkedin.com/in/ahmadmakkii"
 location: "Available worldwide · remote"
-url: ""
-baseurl: ""
+lang: "en"
+# --- SEO (jekyll-seo-tag) ---
+logo: "/assets/img/og-cover.png"   # optional social share image
+url: "https://ahmadmakki.netlify.app"
+baseurl: "https://ahmadmakki.netlify.app"
 
 # Replace this with your Web3Forms access key (see SETUP-GUIDE)
 web3forms_key: "70913050-fef6-4c4d-8766-4770ba79943d"
@@ -31,6 +34,7 @@ paginate: 6
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 exclude:
   - SETUP-GUIDE.md

@@ -59,6 +59,7 @@ collections:
             name: "services"
             widget: "list"
             fields:
+              - { label: "Icon", name: "icon", widget: "select", required: false, options: ["roadmap","delivery","ai","rescue","call","plan","run","ship"] }
               - { label: "Service name", name: "title", widget: "string" }
               - { label: "Description", name: "text", widget: "text" }
               - { label: "Bullet points", name: "points", widget: "list", field: { label: "Point", name: "point", widget: "string" } }

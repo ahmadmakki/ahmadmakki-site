@@ -3,8 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{% if page.title %}{{ page.title }} — {{ site.author }}{% else %}{{ site.title }}{% endif %}</title>
-<meta name="description" content="{{ page.description | default: site.description }}">
+{% seo %}
+<link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
+<link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
+<meta name="theme-color" content="#1B3A6B">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -12,11 +15,12 @@
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <nav class="top">
   <div class="wrap">
     <a class="brand" href="{{ '/' | relative_url }}">
-      {% if site.avatar != blank %}<span class="avatar" style="background-image:url('{{ site.avatar | relative_url }}')"></span>{% else %}<span class="avatar">{{ site.initials | default: 'AM' }}</span>{% endif %}
+      <img class="brand-logo" src="{{ '/assets/img/logo.svg' | relative_url }}" alt="{{ site.author }} logo" width="32" height="32">
       {{ site.author }}<span class="dot">.</span>
     </a>
     <div class="links">
@@ -29,7 +33,9 @@
   </div>
 </nav>
 
+<main id="main">
 {{ content }}
+</main>
 
 <footer>
   <div class="wrap foot">

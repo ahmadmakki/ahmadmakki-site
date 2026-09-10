@@ -156,3 +156,72 @@ Notes:
 
 Still on the list for a future round (your ranking): depth (case-study pages /
 FAQ / richer about) and trust (testimonials + client strip).
+
+---
+
+## 9. Navy rebrand + SEO / accessibility / best-practices (round 3)
+
+### Colour + layout
+- Replaced the green accent with **deep navy** (#1B3A6B) throughout.
+- Hero headline reduced noticeably (max 46px, was 70px).
+- Hero graphic re-aligned: centred in its column on desktop, centred on mobile.
+- Section backgrounds now clearly distinct (white / cool-grey / a **dark navy band**
+  on "How it works") so the page no longer reads as all-white.
+
+### SEO
+- Activated `jekyll-seo-tag` (title, meta description, canonical, Open Graph,
+  Twitter cards) and added `jekyll-sitemap` (auto `/sitemap.xml`).
+- Set `url` in `_config.yml` (needed for canonical + sitemap).
+- Added `robots.txt` (allows site, disallows /admin, points to sitemap).
+- Added a branded **Open Graph share image** at `/assets/img/og-cover.png`.
+- Added `llms.txt` for AI-agent browsing.
+
+### Accessibility
+- Added a "Skip to content" link and a `<main>` landmark.
+- Darkened secondary text for AA contrast.
+- Hero SVG marked `aria-hidden` (decorative).
+
+### Best practices / performance
+- Added `Cross-Origin-Opener-Policy: same-origin`.
+- Added long-cache headers for `/assets/*`.
+- (Already in place from earlier: CSP, HSTS, X-Frame-Options, nosniff.)
+
+### About the Lighthouse report
+The report you shared showed "Error!" on every line — that means the run did not
+complete, so there were no real scores to act on. The changes above cover the
+categories it lists (SEO, Accessibility, Best Practices, Performance). Re-run
+Lighthouse in an Incognito window against the deployed site for real numbers.
+
+### New/changed files this round
+- `assets/css/style.css`, `index.html`, `_layouts/default.html`, `_config.yml`,
+  `Gemfile`, `netlify.toml`
+- NEW: `robots.txt`, `llms.txt`, `assets/img/og-cover.png`
+
+IMPORTANT: because `Gemfile` changed, delete any local `Gemfile.lock` before
+pushing (or run `bundle update`) so Netlify installs the new gems cleanly.
+
+---
+
+## 10. Logo, favicon, navy buttons, content clarity (round 4)
+
+- **Logo created**: `assets/img/logo.svg` (navy mark, rising "idea -> shipped"
+  path) now sits in the nav next to your name.
+- **Favicon added**: browser-tab icon via `favicon.ico` (root) + `favicon.svg`
+  + `apple-touch-icon.png`, plus a `theme-color`. It'll show in tabs/bookmarks.
+- **Buttons are now navy** (were black) to match the palette.
+- **Service numbers (01/02/03) removed**; icon badges resized and re-padded.
+- **New service added — "Product strategy & roadmap"** — makes clear that clients
+  can consult you to shape a NEW product/platform (vision -> roadmap -> MVP), not
+  only rescue existing ones. The hero and services intro now say this explicitly.
+- Icons are now stored per-service in the content and editable in the CMS
+  (dropdown), so they survive edits.
+
+Note: the `a@b.com` you saw was only in the throwaway preview render — your real
+files use `ahmadmakki01@outlook.com` from `_config.yml`.
+
+New/changed files this round:
+- `index.html`, `assets/css/style.css`, `_layouts/default.html`,
+  `_data/content.yml`, `_includes/icon.html`, `admin/config.yml`
+- NEW: `favicon.ico`, `assets/img/logo.svg`, `assets/img/favicon.svg`,
+  `assets/img/apple-touch-icon.png`, `assets/img/favicon-32.png`,
+  `assets/img/favicon-16.png`, `assets/img/logo-512.png`
