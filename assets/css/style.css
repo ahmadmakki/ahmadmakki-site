@@ -90,7 +90,7 @@ nav.top .wrap{display:flex;justify-content:space-between;align-items:center;padd
 
 /* ---------- WORK / CASE STUDIES ---------- */
 .work-list{border-top:1px solid var(--line);}
-.work{display:grid;grid-template-columns:1fr 2fr;gap:40px;padding:38px 0;border-bottom:1px solid var(--line);align-items:start;}
+.work{display:grid;grid-template-columns:1fr 2fr;gap:40px;padding:38px 0;margin-left:9px;border-bottom:1px solid var(--line);align-items:start;}
 .work .sector{font-size:14px;color:var(--accent);font-weight:600;margin-bottom:8px;}
 .work .client{font-size:18px;font-weight:600;letter-spacing:-0.02em;}
 .work .headline{font-size:20px;font-weight:600;letter-spacing:-0.02em;margin-bottom:12px;}
