@@ -10,7 +10,7 @@ image: /assets/img/og-cover.png
     <div class="hero-grid">
       <div class="hero-copy">
         <div class="meta">
-          {% if site.avatar != blank %}<span class="avatar lg" style="background-image:url('{{ site.avatar | relative_url }}')"></span>{% else %}<span class="avatar lg">{{ site.initials | default: 'AM' }}</span>{% endif %}
+          {% if site.avatar != blank %}<span class="avatar lg" style="background-image:url('{{ site.avatar | relative_url }}')"></span>{% else %}<span class="avatar lg">{{ site.initials }}</span>{% endif %}
           <span>{{ c.hero.badge }}</span>
         </div>
         <h1>{{ c.hero.headline }}</h1>
