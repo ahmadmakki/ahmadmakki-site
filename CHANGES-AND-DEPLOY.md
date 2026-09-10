@@ -41,15 +41,17 @@ it lives in the dashboard, not in the code.
 
 ---
 
-## 3. Add your photo (recommended)
+## 3. Change your profile photo (recommended)
 
-The site currently shows an "AM" monogram avatar. To use a real headshot:
+You can now change the avatar from the admin website:
 
-1. Put the image at `assets/img/headshot.jpg` (square works best).
-2. In `_config.yml`, set:  `avatar: "/assets/img/headshot.jpg"`
-3. Commit & push.
+1. Open `your-site-url/admin` and sign in.
+2. Open **Homepage content → Homepage → Profile**.
+3. Upload a square photo in **Profile photo**, then click **Publish**.
 
-A real face is the biggest single trust boost for a personal consulting site.
+Decap CMS uploads the image to `assets/img`, updates the homepage data, and
+Netlify rebuilds the site automatically. Clear the photo to show the fallback
+initials instead.
 
 ---
 

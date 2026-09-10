@@ -1,3 +1,6 @@
+profile:
+  avatar: /assets/img/profile-avatar.png
+  initials: AM
 hero:
   badge: Available for new projects
   headline: I take software projects from idea to shipped.

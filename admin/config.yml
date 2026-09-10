@@ -31,6 +31,13 @@ collections:
         label: "Homepage"
         file: "_data/content.yml"
         fields:
+          - label: "Profile"
+            name: "profile"
+            widget: "object"
+            fields:
+              - { label: "Profile photo", name: "avatar", widget: "image", required: false }
+              - { label: "Fallback initials", name: "initials", widget: "string", required: false }
+
           - label: "Top section"
             name: "hero"
             widget: "object"

@@ -10,7 +10,7 @@ image: /assets/img/og-cover.png
     <div class="hero-grid">
       <div class="hero-copy">
         <div class="meta">
-          {% if site.avatar != blank %}<span class="avatar lg" style="background-image:url('{{ site.avatar | relative_url }}')"></span>{% else %}<span class="avatar lg">{{ site.initials | default: 'AM' }}</span>{% endif %}
+          {% if c.profile.avatar != blank %}<span class="avatar lg" style="background-image:url('{{ c.profile.avatar | relative_url }}')"></span>{% else %}<span class="avatar lg">{{ c.profile.initials | default: 'AM' }}</span>{% endif %}
           <span>{{ c.hero.badge }}</span>
         </div>
         <h1>{{ c.hero.headline }}</h1>
@@ -178,7 +178,7 @@ image: /assets/img/og-cover.png
     <div class="about">
       <div>
         <div class="a-lead">
-          {% if site.avatar != blank %}<span class="avatar lg" style="background-image:url('{{ site.avatar | relative_url }}')"></span>{% else %}<span class="avatar lg">{{ site.initials | default: 'AM' }}</span>{% endif %}
+          {% if c.profile.avatar != blank %}<span class="avatar lg" style="background-image:url('{{ c.profile.avatar | relative_url }}')"></span>{% else %}<span class="avatar lg">{{ c.profile.initials | default: 'AM' }}</span>{% endif %}
           <div class="kicker" style="margin:0;">About</div>
         </div>
         <h2>{{ c.about.title }}</h2>
