@@ -222,7 +222,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
 
 /* ---------- HOVER POLISH ---------- */
 .srow,.work,.post-row{transition:background .2s ease;}
-.srow:hover,.work:hover{background:rgba(27,58,107,0.04);}
+.srow:hover,.work:hover{background:rgba(27,58,107,0.04);margin-left: 4px;}
 .srow .ico-badge{transition:transform .2s ease, background .2s ease;}
 .srow:hover .ico-badge{transform:translateY(-2px);background:var(--accent);color:#fff;}
 .step{transition:transform .2s ease;}
