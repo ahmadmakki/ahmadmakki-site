@@ -29,7 +29,7 @@ services:
   - icon: roadmap
     title: Product strategy & roadmap
     text: Have an idea for a product or platform but no clear path to build it? I
-      turn the vision into a concrete roadmap — scoping the MVP, sequencing
+      turn the vision into a concrete roadmap, scoping the MVP, sequencing
       releases, and translating 'we want to build X' into a plan your engineers
       can actually execute.
     points:
@@ -48,7 +48,7 @@ services:
   - icon: ai
     title: AI & ML product ownership
     text: I define what "good" looks like for an AI feature, prioritize the backlog
-      around it, and keep it grounded in what's actually shippable — not just
+      around it, and keep it grounded in what's actually shippable, not just
       what's demo-able.
     points:
       - AI/ML & IoT feature roadmapping
@@ -64,13 +64,12 @@ services:
       - Status reporting that stakeholders trust
 process:
   - title: Intro call
-    text: 30 minutes — what you're building, where it's stuck, what "done" looks
-      like.
+    text: 30 minutes, what you're building, where it's stuck, what "done" looks like.
   - title: Scope & plan
     text: I come back with a delivery plan or a diagnosis of what's slipping and why.
   - title: Embed & run
-    text: I work with your team directly — Jira, standups, stakeholder reporting,
-      the real thing.
+    text: I work with your team directly Jira, standups, stakeholder reporting, the
+      real thing.
   - title: Ship & hand off
     text: Release, then a clean handoff with documentation so it doesn't depend on
       me forever.
