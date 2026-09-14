@@ -1,5 +1,5 @@
 profile:
-  avatar: ""
+  avatar: /assets/img/profile-none.png
   initials: AM
 hero:
   badge: Available for new projects
